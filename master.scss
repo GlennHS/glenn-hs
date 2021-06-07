@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@400;700&display=swap');
+
+$theme-dark: #34A1E0;
+$theme-light: #26F1FF;
+//$theme-complement: #d6008f;
+$theme-complement: #f016a7;
+$font-color: #20205a;
+// $font-color: #40408f;
+
+
+body {
+  background: $theme-dark;
+  color: $font-color;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+nav {
+  background: $theme-complement;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+
+  ul {
+    margin: 0 10vw;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+    height: 50px;
+  }
+}
+
+main {
+  margin: 0 20vw;
+  background: $theme-light;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h2, h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-style: italic;
+}
+
+a {
+  color: $theme-complement;
+}
+
+a:hover {
+  color: lighten($theme-complement, 20%)
+}
+
+a:visited {
+  color: darken($theme-complement, 20%);
+}
+
+#profile-img {
+  height: 400px;
+  width: 400px;
+  border: solid 2px $theme-complement;
+  border-radius: 200px;
+  object-fit: cover;
+}
+
+.row {
+  padding: 20px;
+}
+
+#important-links > a {
+  text-align: center;
+}

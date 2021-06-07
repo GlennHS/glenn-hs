@@ -1,0 +1,16 @@
+{
+  "name": "GlennHS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass ./master.scss ./master.css",
+    "watch": "sass ./master.scss ./master.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.34.1"
+  }
+}
