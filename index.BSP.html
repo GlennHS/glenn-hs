@@ -6,6 +6,7 @@
     <title>Glenn H-S</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" integrity="sha512-f28cvdA4Bq3dC9X9wNmSx21rjWI+5piIW/uoc2LuQ67asKxfQjUow2MkcCNcfJiaLrHcGbed1wzYe3dlY4w9gA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
@@ -24,10 +25,11 @@
     </header>
     <main>
       <div class="row">
-        <div id="profile-img-container">
+        <div class="col-lg-5 offset-lg-0 offset-md-2 col-md-8 col-sm-12" id="profile-img-container">
           <img src="./assets/images/GithubSelf.jpg" id="profile-img" alt="A Picture Of Me!"/>
         </div>
-        <div id="bio">
+        <div class="col-lg-1 col-md-12"></div>
+        <div class="col-lg-6 col-md-12">
           <h2>Glenn Hamilton-Smith</h2>
           <h3>Martech Specialist @ <a href="https://clever-touch.com/" target="_blank">Clevertouch Marketing</a></h3>
           <h4>Motivated, Enthusiastic, Curious</h4>
@@ -39,28 +41,28 @@
         </div>
       </div>
       <div class="row" id="important-links">
-        <div class="slide-button">
+        <div class="slide-button col-lg-3 col-md-6" id="btn-git">
           <img src="./assets/images/GitSlideBG.png" />
           <div class="slide-text" link="https://www.github.com/glennhs">
             <h4>GitHub</h4>
             <p>Check out my GitHub here!</p>
           </div>
         </div>
-        <div class="slide-button">
+        <div class="slide-button col-lg-3 col-md-6" id="btn-li">
           <img src="./assets/images/LinkedInSlideBG.png" />
           <div class="slide-text" link="https://www.linkedin.com/in/glennhs/">
             <h4>LinkedIn</h4>
             <p>Check out my LinkedIn here!</p>
           </div>
         </div>
-        <div class="slide-button">
+        <div class="slide-button col-lg-3 col-md-6">
           <img src="assets/images/ContactSlideBG.png" />
           <div class="slide-text" link="#">
             <h4>Contact</h4>
             <p>Email me here!</p>
           </div>
         </div>
-        <div class="slide-button">
+        <div class="slide-button col-lg-3 col-md-6">
           <img src="./assets/images/PortfolioSlideBG.png" />
           <div class="slide-text" link="#">
             <h4>Portfolio</h4>
@@ -68,64 +70,14 @@
           </div>
         </div>
       </div>
-      <h2>Competencies</h2>
-      <div id="competencies">
-        <div class="competency" link="#">
-          <img src="assets/images/competencies/jquery.png" />
-          <div class="card-content">
-            <h4>JQuery</h4>
-            <h5>Skill: ⭐⭐⭐⭐⭐</h5>
-            <h5>Years: 7</h5>
-          </div>
-        </div>
-        <div class="competency" link="#">
-          <img src="assets/images/competencies/jquery.png" />
-          <div class="card-content">
-            <h4>JQuery</h4>
-            <h5>Skill: ⭐⭐⭐⭐⭐</h5>
-            <h5>Years: 7</h5>
-          </div>
-        </div><div class="competency" link="#">
-          <img src="assets/images/competencies/jquery.png" />
-          <div class="card-content">
-            <h4>JQuery</h4>
-            <h5>Skill: ⭐⭐⭐⭐⭐</h5>
-            <h5>Years: 7</h5>
-          </div>
-        </div><div class="competency" link="#">
-          <img src="assets/images/competencies/jquery.png" />
-          <div class="card-content">
-            <h4>JQuery</h4>
-            <h5>Skill:</h5>
-            <span class="stars">⭐⭐⭐⭐⭐</span>
-            <h5>Years: 7</h5>
-          </div>
-        </div><div class="competency" link="#">
-          <img src="assets/images/competencies/jquery.png" />
-          <div class="card-content">
-            <h4>JQuery</h4>
-            <h5>Skill: ⭐⭐⭐⭐⭐</h5>
-            <h5>Years: 7</h5>
-          </div>
-        </div><div class="competency" link="#">
-          <img src="assets/images/competencies/jquery.png" />
-          <div class="card-content">
-            <h4>JQuery</h4>
-            <h5>Skill: ⭐⭐⭐⭐⭐</h5>
-            <h5>Years: 7</h5>
-          </div>
+      <div class="row" id="competencies">
+        <div class="competency col-sm-4 col-md-3 col-lg-2" link="#" pic="./assets/images/competencies/jquery.png">
+          <h4>JQuery</h4>
         </div>
       </div>
     </main>
 
-    <div class="spacer"></div>
-
-    <footer>
-      <div id="footer-container">
-
-      </div>
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/index.js" async defer></script>

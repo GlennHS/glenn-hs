@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass ./master.scss ./master.css",
-    "watch": "sass ./master.scss ./master.css --watch"
+    "build": "sass ./master.scss ./assets/master.css",
+    "watch": "sass ./master.scss ./assets/master.css --watch"
   },
   "keywords": [],
   "author": "",
