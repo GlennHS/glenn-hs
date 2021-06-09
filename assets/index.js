@@ -4,12 +4,19 @@ $(document).ready( () => {
   $(window).resize( renderView() )
 
   // #region Slide Buttons
+  // $('.slide-button').hover( function() {
+  //   $(this).find('img').stop();
+  //   $(this).find('img').animate({transform: "translateX(-90%)"})
+  // },function() {
+  //   $(this).find('img').stop();
+  //   $(this).find('img').animate({left: "0"})
+  // })
   $('.slide-button').hover( function() {
-    $(this).find('img').stop();
-    $(this).find('img').animate({left: "-90%"})
-  },function() {
-    $(this).find('img').stop();
-    $(this).find('img').animate({left: "0"})
+    $(this).find("img").stop()
+    $(this).find("img").animate({"left": $(this)[0].offsetWidth * -0.9}, 500)
+  }, function() {
+    $(this).find("img").stop()
+    $(this).find("img").animate({"left": ""}, 500)
   })
   // #endregion
 
@@ -39,4 +46,10 @@ const renderView = function() {
   })
 
   Array.from(document.getElementsByClassName('competency')).forEach( c => { c.style.height = `${c.offsetWidth}px`; })
+
+  $('.stars').each( (i,s) => {
+    if(s.textContent == "⭐⭐⭐⭐⭐") {
+      $(s).addClass("glowy");
+    }
+  })
 }
