@@ -310,6 +310,14 @@ a:visited {
         text-align: center;
       }
     }
+
+    .owl-item {
+      transition: 0.25s ease-in;
+    }
+
+    .owl-item:not(.center) {
+      transform: scale(0.8);
+    }
   }
 }
 /* endregion */
@@ -387,7 +395,7 @@ a:visited {
   }
 }
 
-@-webkit-keyframes glow {
+@keyframes glow {
   from {
     text-shadow: 0 0 0px #fff, 0 0 2px #fff, 0 0 5px $theme-complement, 0 0 8px $theme-complement, 0 0 10px $theme-complement, 0 0 13px $theme-complement, 0 0 15px $theme-complement;
   }

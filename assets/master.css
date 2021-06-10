@@ -6359,6 +6359,12 @@ a:visited {
 .carousel-container .owl-carousel .item p {
   text-align: center;
 }
+.carousel-container .owl-carousel .owl-item {
+  transition: 0.25s ease-in;
+}
+.carousel-container .owl-carousel .owl-item:not(.center) {
+  transform: scale(0.8);
+}
 
 /* endregion */
 @media screen and (max-width: 1200px) {
@@ -6419,7 +6425,7 @@ a:visited {
     font-size: 0.8em;
   }
 }
-@-webkit-keyframes glow {
+@keyframes glow {
   from {
     text-shadow: 0 0 0px #fff, 0 0 2px #fff, 0 0 5px #f016a7, 0 0 8px #f016a7, 0 0 10px #f016a7, 0 0 13px #f016a7, 0 0 15px #f016a7;
   }
