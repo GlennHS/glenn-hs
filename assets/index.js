@@ -1,16 +1,24 @@
 $(document).ready( () => {
 
+  var owl = $('.owl-carousel');
+
+  owl.owlCarousel({
+    center: true,
+    items:3,
+    loop: true,
+    dots: false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true
+  });
+
+  $('#owl-left').click( () => { owl.trigger('prev.owl.carousel') })
+  $('#owl-right').click( () => { owl.trigger('next.owl.carousel') })
+  $('.carousel-container').click( () => { owl.trigger('stop.owl.autoplay') })
+
   renderView()
   $(window).resize( renderView() )
 
-  // #region Slide Buttons
-  // $('.slide-button').hover( function() {
-  //   $(this).find('img').stop();
-  //   $(this).find('img').animate({transform: "translateX(-90%)"})
-  // },function() {
-  //   $(this).find('img').stop();
-  //   $(this).find('img').animate({left: "0"})
-  // })
   $('.slide-button').hover( function() {
     $(this).find("img").stop()
     $(this).find("img").animate({"left": $(this)[0].offsetWidth * -0.9}, 500)
