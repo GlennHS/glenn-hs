@@ -21,10 +21,31 @@ $(document).ready( () => {
 
   $('.slide-button').hover( function() {
     $(this).find("img").stop()
-    $(this).find("img").animate({"left": $(this)[0].offsetWidth * -0.9}, 500)
+    $(this).find("img").animate({"left": $(this)[0].offsetWidth * -0.91}, 500)
   }, function() {
     $(this).find("img").stop()
     $(this).find("img").animate({"left": ""}, 500)
+  })
+
+  $('nav li').hover( function () {
+    $(this).toggleClass("hov")
+  }, function () {
+    $(this).toggleClass("hov")
+  })
+
+  $('.owl-item').click( function () {
+    if($(this).hasClass("center")) {
+      window.open($(this).find(".item").attr("git"), "_blank")  
+    } else {
+      let itemLoc = $('.owl-item').index($(this)) + 1;
+      owl.trigger('to.owl.carousel', [itemLoc])
+    }
+  })
+
+  $('.item').hover(function() {
+    $(this).find("img").toggleClass('hov')
+  }, function() {
+    $(this).find("img").toggleClass('hov')
   })
   // #endregion
 
