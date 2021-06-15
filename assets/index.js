@@ -16,7 +16,13 @@ $(document).ready( () => {
 
   $('#owl-left').click( () => { owl.trigger('prev.owl.carousel') })
   $('#owl-right').click( () => { owl.trigger('next.owl.carousel') })
-  $('.carousel-container').click( () => { owl.trigger('stop.owl.autoplay') })
+  $('.carousel-container').click( () => {
+    owl.trigger('stop.owl.autoplay');
+    $('#owl-slideme').animate({"opacity": "0"}, 500, () => {
+      setTimeout(500)
+      $('#owl-slideme').hide();
+    })
+  })
 
   renderView()
   $(window).resize( renderView() )
@@ -72,8 +78,8 @@ const toggleTheme = () => {
 
 const renderView = function() {
   Array.from(document.getElementsByClassName('slide-button')).forEach( sBtn => {
-    sBtn.style.height = `${sBtn.offsetWidth / 2.5}px`
     sBtn.querySelector('img').style.height = `${sBtn.offsetHeight - 4}px`
+    sBtn.style.height = `${sBtn.offsetWidth / 2.5}px`
   })
 
   Array.from(document.getElementsByClassName('competency')).forEach( c => { c.style.height = `${c.offsetWidth}px`; })
