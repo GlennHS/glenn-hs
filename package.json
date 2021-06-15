@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass ./master.scss ./assets/master.css",
-    "watch": "sass ./master.scss ./assets/master.css --watch"
+    "watch": "sass ./master_dark.scss ./assets/master_dark.css --watch",
+    "watch_light": "sass ./master_light.scss ./assets/master_light.css --watch"
   },
   "keywords": [],
   "author": "",

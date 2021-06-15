@@ -1,3 +1,5 @@
+let usingLightTheme = true;
+
 $(document).ready( () => {
 
   var owl = $('.owl-carousel');
@@ -25,12 +27,6 @@ $(document).ready( () => {
   }, function() {
     $(this).find("img").stop()
     $(this).find("img").animate({"left": ""}, 500)
-  })
-
-  $('nav li').hover( function () {
-    $(this).toggleClass("hov")
-  }, function () {
-    $(this).toggleClass("hov")
   })
 
   $('.owl-item').click( function () {
@@ -67,6 +63,12 @@ $(document).ready( () => {
     $(this).css({filter: `hue-rotate(${Math.floor(Math.random() * 360)}deg)`})
   })
 });
+
+const toggleTheme = () => {
+  usingLightTheme = !usingLightTheme
+  document.querySelector("link[href='./assets/master_light.css']").disabled = usingLightTheme
+  document.querySelector("link[href='./assets/master_dark.css']").disabled = !usingLightTheme
+}
 
 const renderView = function() {
   Array.from(document.getElementsByClassName('slide-button')).forEach( sBtn => {

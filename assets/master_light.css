@@ -6084,9 +6084,13 @@ readers do not read off random characters that represent icons */
   font-weight: 900;
 }
 
+* {
+  transition: 0.3s ease-in;
+}
+
 body {
-  background: #006699;
-  color: #20205a;
+  background: #00aaff;
+  color: #20205b;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -6099,7 +6103,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background: #f016a7;
+  background: #ff99ee;
   font-size: 1.4em;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
@@ -6115,30 +6119,40 @@ nav ul {
   height: 50px;
 }
 nav ul li {
-  border-right: solid 2px #960a67;
-  border-left: solid 2px #960a67;
+  height: calc(100% - 20px);
+  border-right: solid 2px #ff33dd;
+  border-left: solid 2px #ff33dd;
   padding: 10px 15px;
   transition: 0.3s ease-in;
 }
 nav ul li.logo {
-  background: #ffffff;
-  color: #f016a7;
+  background: #ff00d5;
+  color: #ffffff !important;
+  color: #ff99ee;
 }
 nav ul li a {
   color: #ffffff !important;
   text-decoration: none;
   transition: 0.3s ease-in;
+  width: 100%;
+  height: 100%;
 }
-nav ul li a:not(.logo):hover {
-  color: #f016a7 !important;
-}
-nav ul li.hov:not(.logo) {
+nav ul li:hover:not(.logo) {
   background: #ffffff;
+}
+nav ul li:hover:not(.logo) a {
+  color: #ff99ee !important;
+}
+nav #theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10%;
+  color: white;
 }
 
 main {
   margin: 50px 20vw;
-  background: #26F1FF;
+  background: #99ffff;
   padding: 25px;
 }
 main > div {
@@ -6155,7 +6169,7 @@ h2 {
   font-size: 2em;
   line-height: 2em;
   font-weight: 700;
-  border-bottom: 3px solid #f016a7;
+  border-bottom: 3px solid #ff99ee;
 }
 
 h3 {
@@ -6174,15 +6188,17 @@ h4 {
 }
 
 a {
-  color: #f016a7;
+  color: #ff4de1;
+  text-decoration: underline #ff4de1;
 }
 
 a:hover {
-  color: #f676cb;
+  color: #ff99ee;
+  text-decoration: none;
 }
 
 a:visited {
-  color: #960a67;
+  color: #b30095;
 }
 
 *[link] {
@@ -6199,7 +6215,7 @@ a:visited {
   grid-column: 1/7;
 }
 #profile-img-container img {
-  border: solid 2px #f016a7;
+  border: solid 2px #ff99ee;
   border-radius: 50%;
   width: 100%;
   transition: 1s linear;
@@ -6220,8 +6236,8 @@ a:visited {
 .slide-button {
   overflow: hidden;
   position: relative;
-  border: solid 2px #f016a7;
-  background: #006699;
+  border: solid 2px #ff99ee;
+  background: #00aaff;
   color: white;
   width: 20%;
   min-width: 200px;
@@ -6234,9 +6250,9 @@ a:visited {
 
 .slide-text {
   position: relative;
-  width: 90%;
+  width: 75%;
   margin-left: 10%;
-  padding-top: 5%;
+  padding: 5% 5% 0 10%;
   text-align: center;
 }
 .slide-text h4 {
@@ -6257,6 +6273,7 @@ a:visited {
   margin: 0;
   padding: 0;
   z-index: 99;
+  transition: none;
 }
 
 /* #endregion */
@@ -6274,7 +6291,7 @@ a:visited {
   position: relative;
   width: 15%;
   min-width: 150px;
-  border: solid 2px #f016a7;
+  border: solid 2px #ff99ee;
   border-radius: 10px;
   background-color: #000000;
   display: flex;
@@ -6317,7 +6334,7 @@ a:visited {
   text-align: center;
 }
 #competencies .competency.flipped h4, #competencies .competency.flipped h5 {
-  -webkit-text-stroke: 1px #f016a7;
+  -webkit-text-stroke: 1px #ff99ee;
   display: block !important;
   color: white;
   font-weight: 700;
@@ -6364,7 +6381,7 @@ a:visited {
   cursor: pointer;
 }
 .carousel-container .owl-carousel .item .owl-card-top {
-  background-color: #006699;
+  background-color: #00aaff;
   width: 100%;
   object-fit: cover;
   margin: 0;
@@ -6380,10 +6397,10 @@ a:visited {
   filter: blur(5px);
 }
 .carousel-container .owl-carousel .item .owl-card-bottom {
-  background-color: #26F1FF;
+  background-color: #99ffff;
   overflow: hidden;
   width: 100%;
-  border: 3px solid #006699;
+  border: 3px solid #00aaff;
   border-top: none;
   border-radius: 0 0 25px 25px;
   box-sizing: border-box;
@@ -6462,11 +6479,11 @@ a:visited {
 }
 @keyframes glow {
   from {
-    text-shadow: 0 0 0px #fff, 0 0 2px #fff, 0 0 5px #f016a7, 0 0 8px #f016a7, 0 0 10px #f016a7, 0 0 13px #f016a7, 0 0 15px #f016a7;
+    text-shadow: 0 0 0px #fff, 0 0 2px #fff, 0 0 5px #ff99ee, 0 0 8px #ff99ee, 0 0 10px #ff99ee, 0 0 13px #ff99ee, 0 0 15px #ff99ee;
   }
   to {
-    text-shadow: 0 0 8px #fff, 0 0 10px #fff, 0 0 13px #f016a7, 0 0 15px #f016a7, 0 0 18px #f016a7, 0 0 21px #f016a7, 0 0 23px #f016a7;
+    text-shadow: 0 0 8px #fff, 0 0 10px #fff, 0 0 13px #ff99ee, 0 0 15px #ff99ee, 0 0 18px #ff99ee, 0 0 21px #ff99ee, 0 0 23px #ff99ee;
   }
 }
 
-/*# sourceMappingURL=master.css.map */
+/*# sourceMappingURL=master_light.css.map */
